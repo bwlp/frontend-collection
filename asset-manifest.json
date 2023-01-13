@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kana-practice/static/css/main.af9fd351.css",
+    "main.js": "/kana-practice/static/js/main.04861303.js",
+    "static/js/787.514d3aa0.chunk.js": "/kana-practice/static/js/787.514d3aa0.chunk.js",
+    "index.html": "/kana-practice/index.html",
+    "main.af9fd351.css.map": "/kana-practice/static/css/main.af9fd351.css.map",
+    "main.04861303.js.map": "/kana-practice/static/js/main.04861303.js.map",
+    "787.514d3aa0.chunk.js.map": "/kana-practice/static/js/787.514d3aa0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af9fd351.css",
+    "static/js/main.04861303.js"
+  ]
+}
