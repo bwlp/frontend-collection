@@ -1,4 +1,4 @@
-import { Main } from 'main/Main';
+import { Main } from './main/Main';
 import { InputStateProvider } from './main/InputStateContext';
 
 function App() {

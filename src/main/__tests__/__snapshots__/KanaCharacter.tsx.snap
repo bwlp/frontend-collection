@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`main -> JapaneseCharacter History List should show the actual values for characters 1`] = `
+exports[`main -> KanaCharacter > History List > should show the actual values for characters 1`] = `
 <div>
   <div
     class="character-list-item"
@@ -28,7 +28,7 @@ exports[`main -> JapaneseCharacter History List should show the actual values fo
 </div>
 `;
 
-exports[`main -> JapaneseCharacter should not show the actual values for "Input" characters 1`] = `
+exports[`main -> KanaCharacter > should not show the actual values for "Input" characters 1`] = `
 <div>
   <div
     class="character-list-item has-input"
