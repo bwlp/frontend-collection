@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`main -> JapaneseCharacter History List should show the actual values for characters 1`] = `
+<div>
+  <div
+    class="character-list-item"
+    data-testid="historyCharacter"
+  >
+    <div
+      class="character-list-item-actual"
+    >
+      zo
+    </div>
+    <div
+      class="character-list-item-input correct"
+      data-testid="historyCharacterValue"
+    >
+      zo
+    </div>
+    <div
+      class="character-list-item-time"
+    >
+      0
+      s
+    </div>
+    ぞ
+  </div>
+</div>
+`;
+
+exports[`main -> JapaneseCharacter should not show the actual values for "Input" characters 1`] = `
+<div>
+  <div
+    class="character-list-item has-input"
+    data-testid="inputCharacter"
+  >
+    <div
+      class="character-list-item-input"
+      data-testid="inputCharacterValue"
+    >
+      <div
+        class="flashing-underscore"
+      />
+    </div>
+    ぞ
+  </div>
+</div>
+`;
