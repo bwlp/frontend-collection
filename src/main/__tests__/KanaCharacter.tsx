@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 import { KanaCharacter } from '../KanaCharacter';
 import { InputStateProvider } from '../InputStateContext';
 import * as utils from '../utils';
@@ -35,7 +36,7 @@ describe('main -> KanaCharacter', () => {
 
   describe('Hidden Input', () => {
     it('should not render the hidden input when the device is not mobile', () => {
-      jest.spyOn(utils, 'isMobile').mockReturnValue(false);
+      vi.spyOn(utils, 'isMobile').mockReturnValue(false);
 
       render(
         <InputStateProvider>
@@ -47,7 +48,7 @@ describe('main -> KanaCharacter', () => {
     });
 
     it('should render the hidden input when the device is mobile', () => {
-      jest.spyOn(utils, 'isMobile').mockReturnValue(true);
+      vi.spyOn(utils, 'isMobile').mockReturnValue(true);
 
       render(
         <InputStateProvider>

@@ -49,11 +49,11 @@ describe('main -> Main', () => {
     expect(screen.getByText('Hiragana')).toHaveClass('active');
     expect(screen.getByText('Katakana')).not.toHaveClass('active');
 
-    userEvent.click(screen.getByText('Katakana'));
+    await userEvent.click(screen.getByRole('button', { name: 'Katakana' }));
     expect(screen.getByText('Hiragana')).not.toHaveClass('active');
     expect(screen.getByText('Katakana')).toHaveClass('active');
 
-    userEvent.click(screen.getByText('Hiragana'));
+    await userEvent.click(screen.getByRole('button', { name: 'Hiragana' }));
     expect(screen.getByText('Hiragana')).toHaveClass('active');
     expect(screen.getByText('Katakana')).not.toHaveClass('active');
   });
