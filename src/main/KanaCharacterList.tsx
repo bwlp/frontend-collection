@@ -1,5 +1,5 @@
 import { generateNewCharacter } from './utils';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, KeyboardEvent } from 'react';
 import { useInputState } from './InputStateContext';
 import { ICharacterListHistory, TCharacterType } from './types';
 import { KanaCharacter } from './KanaCharacter';
@@ -34,22 +34,38 @@ export const KanaCharacterList = () => {
     }
   }, [setHistory]);
 
+  const selectHiragana = () => setType('hiragana');
+  const selectKatakana = () => setType('katakana');
+  const saveHistory = () => localStorage.setItem('history', JSON.stringify(history));
+
   return (
     <div className="character-list-container">
       <div className="character-list-header-container">
         <KanaCharacter type={type} hasInput actual={currentCharacter} input={state.current} />
         <div className="character-list-config" data-testid="characterListConfig">
-          <div role="button" onClick={() => setType('hiragana')} className={type === 'hiragana' ? 'active' : ''}>
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={selectHiragana}
+            onKeyDown={callFunctionWhenSpacePressed(selectHiragana)}
+            className={type === 'hiragana' ? 'active' : ''}
+          >
             Hiragana
           </div>
-          <div role="button" onClick={() => setType('katakana')} className={type === 'katakana' ? 'active' : ''}>
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={selectKatakana}
+            onKeyDown={callFunctionWhenSpacePressed(selectKatakana)}
+            className={type === 'katakana' ? 'active' : ''}
+          >
             Katakana
           </div>
           <div
             role="button"
-            onClick={() => {
-              localStorage.setItem('history', JSON.stringify(history));
-            }}
+            tabIndex={0}
+            onClick={saveHistory}
+            onKeyDown={callFunctionWhenSpacePressed(saveHistory)}
             className="save-button"
           >
             Save
@@ -70,3 +86,6 @@ export const KanaCharacterList = () => {
     </div>
   );
 };
+
+const callFunctionWhenSpacePressed = (callback: () => void) => (e: KeyboardEvent<HTMLDivElement>) =>
+  e.code === 'Space' && callback();

@@ -11,7 +11,7 @@ export const generateNewCharacter = (history: ICharacterListHistory[]) => {
   let newCharacter = '';
   
   while (!newCharacter || lastTenCharacters.includes(newCharacter)) {
-    let randomValue = Math.floor(Math.random() * characterList.length);
+    const randomValue = Math.floor(Math.random() * characterList.length);
     newCharacter = characterList[randomValue];
   }
 
