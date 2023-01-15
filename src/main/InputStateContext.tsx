@@ -1,5 +1,4 @@
-import { Dispatch } from 'react';
-import { createContext, useContext, PropsWithChildren, useReducer } from 'react';
+import { createContext, useContext, PropsWithChildren, useReducer, Dispatch } from 'react';
 
 type TState = { current: string; skip?: boolean; time?: number };
 type TAction = { type: string; payload?: TState };
@@ -37,7 +36,7 @@ const inputStateReducer = (state: TState, action: TAction) => {
   }
 };
 
-export const InputStateProvider = ({ children }: PropsWithChildren<{}>) => {
+export const InputStateProvider = ({ children }: PropsWithChildren) => {
   const [state, dispatch] = useReducer(inputStateReducer, { current: '' });
 
   const value = { state, dispatch };
