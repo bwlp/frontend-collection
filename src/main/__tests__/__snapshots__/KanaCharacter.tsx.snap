@@ -6,23 +6,23 @@ exports[`main -> KanaCharacter > History List > should show the actual values fo
     class="kana-character-block"
     data-testid="historyCharacter"
   >
-    <div
+    <span
       class="character-list-item-actual"
     >
       zo
-    </div>
-    <div
+    </span>
+    <span
       class="character-list-item-input text-green-600"
       data-testid="historyCharacterValue"
     >
       zo
-    </div>
-    <div
+    </span>
+    <span
       class="character-list-item-time"
     >
       0
       s
-    </div>
+    </span>
     ぞ
   </div>
 </div>
@@ -34,14 +34,14 @@ exports[`main -> KanaCharacter > should not show the actual values for "Input" c
     class="kana-character-block kana-input-field"
     data-testid="inputCharacter"
   >
-    <div
+    <span
       class="character-list-item-input text-xl leading-normal left-2"
       data-testid="inputCharacterValue"
     >
-      <div
+      <span
         class="border-b border-black border-solid inline-block w-1 animate-flash"
       />
-    </div>
+    </span>
     ぞ
   </div>
 </div>
