@@ -39,16 +39,16 @@ export const KanaCharacterList = () => {
   const saveHistory = () => localStorage.setItem('history', JSON.stringify(history));
 
   return (
-    <div className="character-list-container">
-      <div className="character-list-header-container">
+    <div className="max-w-3xl mx-auto">
+      <div className="flex justify-between mb-1" data-testid="appHeader">
         <KanaCharacter type={type} hasInput actual={currentCharacter} input={state.current} />
-        <div className="character-list-config" data-testid="characterListConfig">
+        <div className="pt-1 text-right text-neutral-700 text-base" data-testid="characterListConfig">
           <div
             role="button"
             tabIndex={0}
             onClick={selectHiragana}
             onKeyDown={callFunctionWhenSpacePressed(selectHiragana)}
-            className={type === 'hiragana' ? 'active' : ''}
+            className={`config-button ${type === 'hiragana' ? 'active' : ''}`}
           >
             Hiragana
           </div>
@@ -57,7 +57,7 @@ export const KanaCharacterList = () => {
             tabIndex={0}
             onClick={selectKatakana}
             onKeyDown={callFunctionWhenSpacePressed(selectKatakana)}
-            className={type === 'katakana' ? 'active' : ''}
+            className={`config-button ${type === 'katakana' ? 'active' : ''}`}
           >
             Katakana
           </div>
@@ -66,13 +66,13 @@ export const KanaCharacterList = () => {
             tabIndex={0}
             onClick={saveHistory}
             onKeyDown={callFunctionWhenSpacePressed(saveHistory)}
-            className="inline-block"
+            className="inline-block config-button"
           >
             Save
           </div>
         </div>
       </div>
-      <div className="character-list">
+      <div className="kana-character-list" data-testid="characterList">
         {history.length > 0 ? (
           history
             .map((item, index) => (
@@ -80,7 +80,12 @@ export const KanaCharacterList = () => {
             ))
             .reverse()
         ) : (
-          <div className="character-list-empty">Type the sound of the character. Press ENTER to skip.</div>
+          <div
+            className="text-base w-full flex items-center bg-gray-200 bg-opacity-90 m-1 rounded px-2 py-4"
+            data-testid="emptyCardMessage"
+          >
+            Type the sound of the character. Press ENTER to skip.
+          </div>
         )}
       </div>
     </div>

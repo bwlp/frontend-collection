@@ -17,14 +17,14 @@ describe('main -> KanaCharacter', () => {
       const { container } = render(<KanaCharacter actual="zo" input="zo" />);
 
       expect(screen.getAllByText('zo')).toHaveLength(2);
-      expect(screen.getAllByText('zo')[1]).toHaveClass('correct');
+      expect(screen.getAllByText('zo')[1]).toHaveClass('text-green-600');
       expect(container).toMatchSnapshot();
     });
 
     it('should show an incorrect class for incorrect inputs', () => {
       render(<KanaCharacter actual="zo" input="bu" />);
 
-      expect(screen.getByText('bu')).toHaveClass('incorrect');
+      expect(screen.getByText('bu')).toHaveClass('text-red-500');
     });
 
     it('should convert the time from milliseconds into seconds', () => {
