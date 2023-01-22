@@ -25,22 +25,23 @@ export const KanaCharacter = ({
   // is the input character
   if (hasInput) {
     return (
-      <div className="character-list-item has-input" data-testid="inputCharacter">
-        <div className="character-list-item-input" data-testid="inputCharacterValue">
+      <div className="kana-character-block kana-input-field" data-testid="inputCharacter">
+        <div className="character-list-item-input text-xl leading-normal left-2" data-testid="inputCharacterValue">
           {input}
-          <div className="flashing-underscore" />
+          <div className="border-b border-black border-solid inline-block w-1 animate-flash" />
         </div>
         {characterJson[actual]}
         {isMobile() && <HiddenInput />}
       </div>
     );
   }
+
   // history characters
   return (
-    <div className="character-list-item" data-testid="historyCharacter">
+    <div className="kana-character-block" data-testid="historyCharacter">
       <div className="character-list-item-actual">{actual}</div>
       <div
-        className={`character-list-item-input ${actual === input ? 'correct' : 'incorrect'}`}
+        className={`character-list-item-input ${actual === input ? 'text-green-600' : 'text-red-500'}`}
         data-testid="historyCharacterValue"
       >
         {input}

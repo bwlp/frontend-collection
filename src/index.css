@@ -23,28 +23,16 @@
 }
 
 @layer components {
-  .character-list-container {
-    @apply max-w-3xl mx-auto;
-  }
-  
-  .character-list-header-container {
-    @apply flex justify-between mb-1;
-  }
-  
-  .character-list {
+  .kana-character-list {
     flex-flow: wrap;
     @apply p-0.5 rounded-sm flex bg-white bg-opacity-20;
   }
-  
-  .character-list-empty {
-    @apply text-base w-full flex items-center bg-gray-200 bg-opacity-90 m-1 rounded px-2 py-4;
-  }
-  
-  .character-list-item {
+
+  .kana-character-block {
     @apply leading-none inline-flex flex-col items-center justify-center h-12 w-12 m-1 rounded relative text-xl bg-gray-200 bg-opacity-90;
   }
   
-  .has-input {
+  .kana-input-field {
     @apply cursor-pointer text-5xl h-28 w-28 mx-0 my-1 rounded-lg duration-200 bg-white placeholder-opacity-90 hover:bg-white;
   }
   
@@ -52,54 +40,23 @@
     font-size: 0.65rem; /* text-xs */
     @apply absolute top-0.5 right-0.5 text-neutral-700;
   }
-  .has-input > .character-list-item-actual{
-    @apply leading-normal text-xl right-2;
-  }
-  
+
   .character-list-item-input {
     font-size: 0.65rem; /* text-xs */
     @apply absolute top-0.5 left-0.5 mr-0.5 text-neutral-700;
   }
-  .has-input > .character-list-item-input {
-    @apply text-xl leading-normal left-2;
-  }
-  
+
   .character-list-item-time {
     font-size: 0.5rem; /* text-xs */
     @apply absolute bottom-0.5 left-0.5 text-neutral-400;
   }
   
-  .correct {
-    @apply text-green-600;
-  }
-  .incorrect {
-    @apply text-red-500
+  .config-button {
+    @apply cursor-pointer p-1.5 rounded hover:bg-white hover:bg-opacity-50 active:bg-white active:bg-opacity-70;
   }
   
-  .flashing-underscore {
-    @apply border-b border-black border-solid inline-block w-1 animate-flash;
-  }
-  
-  .character-list-config {
-    @apply pt-1 text-right text-neutral-700 text-base;
-  }
-  
-  .character-list-config > div {
-    @apply cursor-pointer p-1.5 rounded;
-  }
-  
-  .character-list-config > div:hover {
-    @apply bg-white bg-opacity-50;
-  }
-  .character-list-config > div:active {
-    @apply bg-white bg-opacity-70;
-  }
-  .character-list-config > div.active {
+  .config-button.active {
     @apply bg-white bg-opacity-40;
-  }
-  
-  .hidden-input {
-    @apply opacity-0 absolute h-full w-full cursor-pointer;
   }
 }
 

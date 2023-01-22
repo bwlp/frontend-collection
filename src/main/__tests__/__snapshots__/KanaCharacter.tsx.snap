@@ -3,7 +3,7 @@
 exports[`main -> KanaCharacter > History List > should show the actual values for characters 1`] = `
 <div>
   <div
-    class="character-list-item"
+    class="kana-character-block"
     data-testid="historyCharacter"
   >
     <div
@@ -12,7 +12,7 @@ exports[`main -> KanaCharacter > History List > should show the actual values fo
       zo
     </div>
     <div
-      class="character-list-item-input correct"
+      class="character-list-item-input text-green-600"
       data-testid="historyCharacterValue"
     >
       zo
@@ -31,15 +31,15 @@ exports[`main -> KanaCharacter > History List > should show the actual values fo
 exports[`main -> KanaCharacter > should not show the actual values for "Input" characters 1`] = `
 <div>
   <div
-    class="character-list-item has-input"
+    class="kana-character-block kana-input-field"
     data-testid="inputCharacter"
   >
     <div
-      class="character-list-item-input"
+      class="character-list-item-input text-xl leading-normal left-2"
       data-testid="inputCharacterValue"
     >
       <div
-        class="flashing-underscore"
+        class="border-b border-black border-solid inline-block w-1 animate-flash"
       />
     </div>
     ぞ

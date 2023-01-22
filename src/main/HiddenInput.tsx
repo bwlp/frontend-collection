@@ -20,7 +20,7 @@ export const HiddenInput = () => {
         }
       }}
       value=""
-      className="hidden-input"
+      className="opacity-0 absolute h-full w-full cursor-pointer"
       data-testid="hiddenInput"
     />
   );
