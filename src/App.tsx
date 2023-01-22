@@ -3,7 +3,7 @@ import { InputStateProvider } from './main/InputStateContext';
 
 function App() {
   return (
-    <div className="App">
+    <div className="p-2">
       <InputStateProvider>
         <Main />
       </InputStateProvider>

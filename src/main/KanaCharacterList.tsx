@@ -66,7 +66,7 @@ export const KanaCharacterList = () => {
             tabIndex={0}
             onClick={saveHistory}
             onKeyDown={callFunctionWhenSpacePressed(saveHistory)}
-            className="save-button"
+            className="inline-block"
           >
             Save
           </div>
