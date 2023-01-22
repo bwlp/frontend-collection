@@ -26,10 +26,10 @@ export const KanaCharacter = ({
   if (hasInput) {
     return (
       <div className="kana-character-block kana-input-field" data-testid="inputCharacter">
-        <div className="character-list-item-input text-xl leading-normal left-2" data-testid="inputCharacterValue">
+        <span className="character-list-item-input text-xl leading-normal left-2" data-testid="inputCharacterValue">
           {input}
-          <div className="border-b border-black border-solid inline-block w-1 animate-flash" />
-        </div>
+          <span className="border-b border-black border-solid inline-block w-1 animate-flash" />
+        </span>
         {characterJson[actual]}
         {isMobile() && <HiddenInput />}
       </div>
@@ -39,14 +39,14 @@ export const KanaCharacter = ({
   // history characters
   return (
     <div className="kana-character-block" data-testid="historyCharacter">
-      <div className="character-list-item-actual">{actual}</div>
-      <div
+      <span className="character-list-item-actual">{actual}</span>
+      <span
         className={`character-list-item-input ${actual === input ? 'text-green-600' : 'text-red-500'}`}
         data-testid="historyCharacterValue"
       >
         {input}
-      </div>
-      <div className="character-list-item-time">{Math.round(time * 100) / 100000}s</div>
+      </span>
+      <span className="character-list-item-time">{Math.round(time * 100) / 100000}s</span>
       {characterJson[actual]}
     </div>
   );

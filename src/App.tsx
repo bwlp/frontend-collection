@@ -3,11 +3,9 @@ import { InputStateProvider } from './main/InputStateContext';
 
 function App() {
   return (
-    <div className="p-2">
-      <InputStateProvider>
-        <Main />
-      </InputStateProvider>
-    </div>
+    <InputStateProvider>
+      <Main />
+    </InputStateProvider>
   );
 }
 
