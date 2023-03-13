@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`main -> KanaCharacter > History List > should show the actual values for characters 1`] = `
 <div>
