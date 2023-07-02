@@ -1,2 +1,7 @@
-# Kana Practice
-Click [here](https://bwlp.github.io/kana-practice) to practice your hiragana/katakana.
+# Frontend project collection
+
+```bash
+pnpm install
+pnpm dev
+pnpm build
+```

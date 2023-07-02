@@ -1,0 +1,64 @@
+{
+  "name": "kana-practice",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/node": "^16.18.38",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.3.9",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "dev": "vite --port 3002",
+    "build": "tsc && vite build",
+    "serve": "vite serve",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "predeploy": "npm run build",
+    "deploy": "vite build && gh-pages -d dist",
+    "lint": "eslint . --ext .ts,.tsx",
+    "outdated": "ncu -t minor -u",
+    "outdated:update": "ncu -t minor -u; pnpm upgrade; rm pnpm-lock.yaml; pnpm install"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/create-config": "^0.4.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/testing-library__jest-dom": "^5.14.6",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "@vitejs/plugin-react": "^3.1.0",
+    "@vitest/coverage-c8": "^0.32.2",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "gh-pages": "^3.2.3",
+    "jsdom": "^21.1.2",
+    "npm-check-updates": "^16.10.13",
+    "postcss": "^8.4.24",
+    "prettier": "^2.8.8",
+    "tailwindcss": "^3.3.2",
+    "vitest": "^0.32.2"
+  }
+}

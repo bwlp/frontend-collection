@@ -1,25 +1,10 @@
 module.exports = {
-  extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:import/recommended',
-    'plugin:jsx-a11y/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react/jsx-runtime',
-    'eslint-config-prettier',
-  ],
+  root: true,
+  // This tells ESLint to load the config from the package `eslint-config-custom`
+  extends: ["custom"],
   settings: {
-    react: {
-      version: 'detect',
+    next: {
+      rootDir: ["apps/*/"],
     },
-    'import/resolver': {
-      node: {
-        paths: ['src'],
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
-      },
-    },
-  },
-  rules: {
-    // Add your own rules here to override ones from the extended configs.
   },
 };
