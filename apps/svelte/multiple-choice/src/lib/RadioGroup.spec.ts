@@ -1,6 +1,6 @@
-import { describe, expect, it,  } from 'vitest';
-import RadioGroup from './RadioGroup.svelte';
 import { fireEvent, render, screen, waitFor } from '@testing-library/svelte';
+import { describe, expect, it, } from 'vitest';
+import RadioGroup from './RadioGroup.svelte';
 
 describe('RadioGroup', () => {
   it('should render number of options based on props', async () => {

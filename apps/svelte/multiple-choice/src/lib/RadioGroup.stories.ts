@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/svelte';
+import '../app.css';
 import RadioGroup from './RadioGroup.svelte';
-import '../app.css'
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/svelte/writing-stories/introduction
 const meta = {

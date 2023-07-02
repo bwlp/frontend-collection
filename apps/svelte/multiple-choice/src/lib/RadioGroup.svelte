@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { fieldsetBindings } from "./stores";
   import RadioGroupToggle from "./RadioGroupToggle.svelte";
+  import { fieldsetBindings } from "./stores";
   export let questionIndex: number;
   export let numberOfOptions: number;
 

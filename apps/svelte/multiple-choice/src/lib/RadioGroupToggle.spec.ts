@@ -1,6 +1,6 @@
+import { fireEvent, render, screen } from '@testing-library/svelte';
 import { describe, expect, it, vitest } from 'vitest';
 import RadioGroupToggle from './RadioGroupToggle.svelte';
-import { render, screen, fireEvent } from '@testing-library/svelte';
 
 describe('RadioGroupToggle', () => {
   it('should render unmarked and unlocked toggle icons', () => {

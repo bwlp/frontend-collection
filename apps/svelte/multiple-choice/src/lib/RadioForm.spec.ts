@@ -1,7 +1,7 @@
+import { fireEvent, render, screen, waitFor, waitForElementToBeRemoved, within } from '@testing-library/svelte';
+import userEvent from '@testing-library/user-event';
 import { describe, expect, it } from 'vitest';
 import RadioForm from './RadioForm.svelte';
-import { render, screen, within, fireEvent, waitFor, waitForElementToBeRemoved } from '@testing-library/svelte';
-import userEvent from '@testing-library/user-event';
 
 describe('RadioForm', () => {
   it('should render 40 questions with 4 options each by default', () => {

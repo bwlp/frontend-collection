@@ -1,6 +1,6 @@
+import { render, screen } from '@testing-library/svelte';
 import { describe, expect, it } from 'vitest';
 import QuestionAlert from './QuestionAlert.svelte';
-import { render, screen } from '@testing-library/svelte';
 
 describe('QuestionAlert', () => {
   it('should not render QuestionAlert if questions is an empty string', () => {
