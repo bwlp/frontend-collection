@@ -17,7 +17,7 @@
     "build": "tsc && vite build",
     "serve": "vite serve",
     "preview": "vite preview",
-    "test": "vitest",
+    "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "predeploy": "npm run build",
     "deploy": "vite build && gh-pages -d dist",

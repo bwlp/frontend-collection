@@ -3,4 +3,6 @@
 ```bash
 pnpm install
 pnpm dev
+pnpm lint
+pnpm test
 ```

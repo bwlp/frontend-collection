@@ -43,6 +43,7 @@
   }
 </script>
 
+<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 <fieldset
   tabindex="0"
   class="fieldset"
