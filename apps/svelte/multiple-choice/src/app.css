@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply h-full bg-gray-800;
+  }
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number'] {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield !important;
+  }
+}
+@layer components {
+  #app {
+    @apply h-full;
+  }
+  .alert {
+    @apply bg-gray-300 opacity-90 fixed right-2 top-2 py-3 px-6 flex items-center z-10 rounded-sm shadow-lg;
+  }
+  .checkedLocked {
+    background-clip: border-box;
+    width: 13px;
+    height: 13px;
+    @apply appearance-none border border-blue-300 bg-clip-border p-1 bg-white rounded-full relative;
+    
+  }
+  .checkedLocked:after {
+    content: '';
+    height: 7px;
+    width: 7px;
+    top: 50%;
+    left: 50%;
+    margin-top: -3.5px;
+    margin-left: -3.5px;
+    @apply absolute block rounded-full bg-blue-300;
+  }
+  .fieldset {
+    @apply border border-transparent py-2 px-4 my-3 mx-3 bg-gray-700 text-white font-bold outline-none box-border;
+  }
+  .fieldset:focus-within {
+    @apply border-blue-600 bg-gray-600
+  }
+  .fieldset:focus {
+    @apply border-blue-400 
+  }
+  .fieldset-legend {
+    @apply block bg-transparent shadow-sm 
+  }
+  .isLocked {
+    @apply bg-opacity-50 text-gray-500
+  }
+  .isLocked:focus-within {
+    @apply bg-opacity-50 text-gray-500
+  }
+  .radio{
+    @apply cursor-pointer focus-visible:outline-blue-400 disabled:cursor-default;
+  }
+  .session-card {
+    top: 40%;
+    left: 50%;
+    @apply fixed rounded bg-gray-900 h-auto w-80 -ml-40 p-6 shadow-lg text-white;
+  }
+}
